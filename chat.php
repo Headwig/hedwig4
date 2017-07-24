@@ -12,7 +12,7 @@
     $pass="";
     $db_name="hedwigbeta";
     $con=new mysqli($host,$user,$pass,$db_name);
-    echo "Hello";
+    echo "Hello".$c.$cc;
 
         function formatDate($date){
     return date('g:i a',strtotime($date));
