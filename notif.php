@@ -6,13 +6,16 @@
     $pass="";
     $db_name="hedwigbeta";
     $con=new mysqli($host,$user,$pass,$db_name);
-    $query="SELECT DISTINCT sender FROM chatunread WHERE receiver='$sen'";
+    $query="SELECT DISTINCT sender FROM chat WHERE receiver='$sen' and status='u'";
      $run=$con->query($query);
     while($row=$run->fetch_array() ) :
 
 ?>
 <html>
+    <script>
     
+
+</script> 
     <body>
         <div id="notifbar">
 

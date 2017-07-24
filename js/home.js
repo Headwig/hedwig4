@@ -1,4 +1,3 @@
-alert();
 function post(s) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -32,7 +31,7 @@ function sub() {
 }
 
 function ajax(){
-    notifcheck();
+     notifcheck();
     var req = new XMLHttpRequest();
     req.onreadystatechange = function(){
         if(req.readyState == 4 && req.status == 200){

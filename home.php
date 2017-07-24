@@ -15,16 +15,16 @@
         <script src="js/home.js"></script>    
         
 <script>
-    setInterval(function(){ajax()}, 300);
+    setInterval(function(){ajax()}, 800);
 function myFunction(ff) {
-    alert(ff.id);
+    alert(ff.id+"home.php");
     document.getElementById(ff.id).click(); // Click on the checkbox
 }
 </script> 
 
     </head>
 
-<body onload="ajax(); ">
+<body onload="ajax(); " >
     
 
     <?php
