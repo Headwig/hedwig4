@@ -14,13 +14,11 @@ $_SESSION["rec"]=$rec;
     $_SESSION["chatid1"]="$chatid1";
     $_SESSION["chatid2"]="$chatid2";
     echo $chatid1.$chatid2;
-
-
     $host="localhost";
     $user="root";
     $pass="";
     $db_name="hedwigbeta";
     $con=new mysqli($host,$user,$pass,$db_name);
-    $query="INSERT INTO `chat` ( `sender`,  `receiver`, `chatid` , 'status' ) VALUES ( '$s', '$r', '$chatid1','r'); ";
+    $query="UPDATE chat SET status='r' WHERE status='u' and sender='".$_SESSION['rec']."' and receiver='".$_SESSION['username']."'";
     $run=$con->query($query);
 ?>
