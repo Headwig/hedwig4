@@ -18,9 +18,17 @@
 </script> 
     <body>
         <div id="notifbar">
-
+            <?php if ($sen== 'EB') { ?>
             <button  id="<?php echo $row['sender']?>" onclick="myFunction(this)" > You have a new message(s) from <?php echo $row['sender'] ?> </button>
             <br>
+            <?php } else { ?>
+                                <button  id="<?php echo $row['sender']?>" onclick="myFunction(this)" > You have a new message(s) who chose the via EB option 
+                                    <?php echo $row['sender'] ?> </button>
+                                <br>
+            <?php } ?>
+    
+
+                        }
 
 </div>
 </body>

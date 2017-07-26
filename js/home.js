@@ -10,12 +10,15 @@ function post(s) {
     xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var p="rec=" + s;
     xmlhttp.send(p);
-            
 }
                  
 function sub() {
     var myText = document.getElementById("msg");
+    var veb=document.getElementById('veb').checked;
     var s = myText.value;
+    var t="false";
+    if(veb==true)
+        t="true";
     var x = new XMLHttpRequest();
     x.onreadystatechange = function() {
         if (x.readyState == 4 && x.status == 200) {
@@ -25,7 +28,7 @@ function sub() {
     }
     x.open("POST", "chatdata.php", true);
     x.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    var p="msg=" + s;
+    var p="msg="+s+"&veb="+t;
     x.send(p);
     document.getElementById("msg").value="";            
 }

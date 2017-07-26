@@ -57,7 +57,7 @@ function myFunction(ff) {
     </div>
     </div>
         <textarea name="message" placeholder="Enter Message" id="msg"></textarea>  
-            
+            <input type='checkbox' name='veb' id='veb' >
             <input type="submit" name="submit" value="Send it" id="sendit" onclick='sub()' /> 
 <div id='status'></div>
 <div id='status1'></div>
