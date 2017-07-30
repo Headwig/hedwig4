@@ -14,12 +14,19 @@
     $query="INSERT INTO CHAT ( sender, message, receiver, chatid, status, eb) VALUES ( '$s', '$foo', '$r', '$chatid1', 'u', '$eb'); ";
     $run = $con->query($query);
     $ppp=0;
-    if(!$run){
-        $ppp=1;
+    echo $eb;
+    if($eb == 'true'){
+        echo "Sending via eb .....";
+        $foo=$foo.$s.$r;
+        $query2="INSERT INTO CHAT ( sender, message, receiver, chatid, status, eb) VALUES ( '$s', '$foo', 'Eb', '".$s."Eb', 'u', '$eb'); ";
+            $run2 = $con->query($query2);
+
     }
-    echo "Hi ";
+else
+{
+    echo"Sending directly & not sending via eb " . $eb;
+}
     echo $foo.$s.$r;
-    echo $ppp;
 
 
 ?>
